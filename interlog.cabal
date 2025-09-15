@@ -1,0 +1,72 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:                interlog
+version:             0.1.0.0
+synopsis:            whatever
+description:         Static site builder, but for gopherholes. Manage phlogs with tags, use the Markdown renderer and Mustache templating system.
+homepage:            https://github.com/someodd/interlog
+bug-reports:         https://github.com/someodd/interlog/issues
+license:             GPL-3.0-only
+license-file:        LICENSE
+author:              someodd
+maintainer:          hi@someodd.zip
+category:            Network
+build-type:          Simple
+tested-with:
+    GHC==9.10.2
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+library
+  other-modules:
+      Paths_interlog
+  autogen-modules:
+      Paths_interlog
+  hs-source-dirs:
+      src
+  default-extensions:
+      OverloadedStrings
+      DeriveGeneric
+      DeriveAnyClass
+      OverloadedRecordDot
+      DuplicateRecordFields
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:
+      base
+    , bytestring
+    , directory
+    , filepath
+    , text
+    , time
+    , unix
+  default-language: GHC2021
+
+executable interlog
+  main-is: Main.hs
+  other-modules:
+      Paths_interlog
+  autogen-modules:
+      Paths_interlog
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      DeriveGeneric
+      DeriveAnyClass
+      OverloadedRecordDot
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:
+      base
+    , bytestring
+    , directory
+    , filepath
+    , interlog
+    , text
+    , time
+    , unix
+  default-language: GHC2021
