@@ -67,9 +67,9 @@ arguments = ["/var/gopher/output/interlogs/", "index", "--host=gopher.someodd.zi
 selector = "/interlog/new"
 search = true
 wildcard = false
-menu = true
+menu = false
 command = "/usr/bin/interlog"
-arguments = ["/var/gopher/output/interlogs/", "new", "$search"]
+arguments = ["/var/gopher/output/interlogs/", "new", "$search", "--confirm-text='1Created %s. Do not refresh. Open me.\t/interlog/logs/%s\tgopher.someodd.zip\t70'"]
 
 [[gateway]]
 selector = "/interlog/append/*"
@@ -77,7 +77,7 @@ search = true
 wildcard = true
 menu = false
 command = "/usr/bin/interlog"
-arguments = ["/var/gopher/output/interlogs/", "append", "$wildcard", "$search"]
+arguments = ["/var/gopher/output/interlogs/", "append", "$wildcard", "$search", "--confirm-text=1Appended to %s. Do not refresh. Open me.\t/interlog/logs/%s\tgopher.someodd.zip\t70"]
 
 [[gateway]]
 selector = "/interlog/log/*"
