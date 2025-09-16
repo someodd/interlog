@@ -1,5 +1,5 @@
 name: interlog
-version: 0.1.0.0
+version: 0.2.0.0
 synopsis: whatever
 description: |
   Static site builder, but for gopherholes. Manage phlogs with tags, use the Markdown renderer and Mustache templating system.

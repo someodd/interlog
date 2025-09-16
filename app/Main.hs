@@ -241,7 +241,7 @@ buildIndex env root host port baseSel mLogsSel = do
   let header = mconcat
         [ "iinterlog index\tnull\terror.host\t1\r\n"
         , "hinterlog's project home\tURL:https://github.com/someodd/interlog\terror.host\t1\r\n"
-        , "iThis is an experimental\tnull\terror.host\t1\r\n"
+        , "iThis is an experimental forum.\tnull\terror.host\t1\r\n"
         , logsLink
         , "7Create new log\t"
           <> selector (pathJoin [baseSel,"new"]) <> "\t" <> host <> "\t" <> port <> "\r\n"
