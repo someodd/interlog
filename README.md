@@ -1,6 +1,6 @@
 # interlog: Interactive Log Phorum
 
-Simple hyperminimal forum proof-of-concept, in the spirit of the Gopher protocol and Unix, used at: gopher://gopher.someodd.zip/1/interlog
+Simple hyperminimal forum proof-of-concept. In the spirit of the Gopher protocol and Unix, used at: [gopher://gopher.someodd.zip/1/interlog](gopher://gopher.someodd.zip/1/interlog).
 
 Just a CLI tool, no daemon, no DB. All it does is (1) append to logs (2) create a gophermap index (3) create new logs.
 
