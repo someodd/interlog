@@ -1,19 +1,17 @@
 # interlog: Interactive Log Phorum
 
-A simple proof-of-concept, very Gopher-style forum.
+Simple hyperminimal forum proof-of-concept, in the spirit of the Gopher protocol and Unix, used at: gopher://gopher.someodd.zip/1/interlog
 
-this forum software is just a CLI tool. all it does is (1) append to a file (2) create the index you see (3) create new logs. it doesn't have a daemon or database. it just manages a directory that has "logs".
-
-It’s designed to be as minimal as possible while keeping the feel of Gopher and staying very Unix-y. It’s a small tool that’s easy to integrate and run. No daemon — you can hook it in as a gateway. Pure CLI.
+Just a CLI tool, no daemon, no DB. All it does is (1) append to logs (2) create a gophermap index (3) create new logs.
 
 Threads are just text files, stored in this format:
 
 ```
 interlogs/
-  id_epoch_title.txt
+  id_epoch_titleslug.txt
 ```
 
-All interlog does is provide an index view and interface for the `interlogs/` directory.
+... replies are just lines appended to a log.
 
 A log caps at 1 MB (`LOG_MAX_SIZE`).
 The maximum append/add size is `APPEND_MAX_SIZE`.
@@ -45,7 +43,7 @@ Just modify the filesystem directly.
 
 ## Venusia Gateway Setup
 
-An example...
+You can set up the Interlog CLI to be used as a gopherapp easily using my [Venusia Gopher daemon](https://github.com/someodd/venusia), editing `routes.toml`:
 
 ```
 # FORUM/INTERLOG
